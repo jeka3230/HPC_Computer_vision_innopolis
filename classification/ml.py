@@ -106,6 +106,7 @@ def classify(clf):
         plt.title(res[test_subset[i]])
     plt.show()
 
-# classify(knn())
+classify(knn())
 classify(RandomForestClassifier(n_jobs=4, n_estimators=100000))
-# classify(svm.SVC(kernel="rbf", gamma=6, C=2))
+classify(svm.SVC(kernel="rbf", gamma=6, C=2))
+classify(GradientBoostingClassifier())
